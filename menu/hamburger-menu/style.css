@@ -100,7 +100,7 @@ textarea:not([rows]) {
   justify-content: space-between;
   align-items: center;
   background-color: cornflowerblue;
-  padding: 0 3rem 0 6rem;
+  padding: 0 3rem;
 }
 
 .header__logo {
@@ -140,13 +140,13 @@ textarea:not([rows]) {
 /* Responsive styles */
 @media (max-width: 575.98px) {
   .header__nav {
-    padding: 0 1rem 0 2rem;
+    padding: 1.5rem 1rem;
   }
 
   .header__logo {
     margin-right: auto;
   }
-  
+
   .header__menu-icon {
     display: block;
     padding: 0.5rem;
@@ -154,11 +154,12 @@ textarea:not([rows]) {
     text-align: right;
     cursor: pointer;
     align-self: end;
+    margin-left: auto;
   }
 
   .header__nav-menu {
     position: fixed;
-    top: 7.5vh;
+    top: 8vh;
     left: -100%;
     width: 100vw;
     height: 100vh;
@@ -166,10 +167,10 @@ textarea:not([rows]) {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    text-align: center;
     transition: transform 0.5s ease-in;
     z-index: 1;
     border-top: 0.5px dashed #fff;
-    text-align: center;
   }
 
   .header__nav-link {
@@ -233,16 +234,15 @@ textarea:not([rows]) {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .header__nav {
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .header__nav-menu {
+    flex-direction: row;
   }
 
   .header__menu-icon {
     display: block;
-  }
-
-  .header__nav-menu {
-    display: flex;
-    flex-direction: row;
   }
 
   .header__menu-btn:checked ~ .header__nav-menu {
